@@ -1,9 +1,9 @@
-SRCS			= main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRCS			= main.cpp FileReplacer.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= clang++
 RM				= rm -f
-CXXFLAGS		= -Wall -Wextra -Werror -I. -g3
+CXXFLAGS		= -Wall -Wextra -Werror -I.
 
 NAME			= directory
 
