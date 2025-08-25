@@ -26,11 +26,21 @@ void Harl::complain( std::string level ) {
         "WARNING",
         "ERROR"
     };
-    for (size_t i = 0; i < 4; i++) {
-        if (levels[i] == level) {
-            (this->*functions[i])();
-            return;
-        }
+    switch (std::find(std::begin(levels), std::end(levels), level) - std::begin(levels)) {
+        case 0:
+            (this->*functions[0])();
+            [[fallthrough]];
+        case 1:
+            (this->*functions[1])();
+            [[fallthrough]];
+        case 2:
+            (this->*functions[2])();
+            [[fallthrough]];
+        case 3:
+            (this->*functions[3])();
+            break;
+        default:
+            std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
     }
 }
 
