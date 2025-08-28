@@ -8,8 +8,6 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
-
 class Zombie {
 public:
     Zombie();
@@ -18,6 +16,7 @@ public:
     Zombie& operator=(const Zombie& other);
     void announce();
 private:
-    string name;
+    std::string name;
+};
 
-#endif //ZOMBIE_HPP
+#endif // ZOMBIE_HPP

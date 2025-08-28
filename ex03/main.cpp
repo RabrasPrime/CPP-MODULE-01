@@ -1,10 +1,7 @@
-
 #include "HumanA.hpp"
 #include "HumanB.hpp"
 #include "Weapon.hpp"
 #include <iostream>
-
-using namespace std;
 
 int main() {
     {

@@ -3,17 +3,18 @@
 //
 
 #include "Zombie.hpp"
+#include <iostream>
 
 Zombie::Zombie() : name("Unnamed") {
-    cout << "A zombie named " << name << " has been created!" << endl;
+    std::cout << "A zombie named " << name << " has been created!" << std::endl;
 }
 
 Zombie::Zombie(const std::string& name) : name(name) {
-    cout << "A zombie named " << name << " has been created!" << endl;
+    std::cout << "A zombie named " << name << " has been created!" << std::endl;
 }
 
 Zombie::~Zombie() {
-    cout << "Zombie " << name << " has been destroyed!" << endl;
+    std::cout << "Zombie " << name << " has been destroyed!" << std::endl;
 }
 
 Zombie& Zombie::operator=(const Zombie& other) {
@@ -24,5 +25,5 @@ Zombie& Zombie::operator=(const Zombie& other) {
 }
 
 void Zombie::announce() {
-    cout << name << ": Braiiiiiiinnnssss..." << endl;
+    std::cout << name << ": Braiiiiiiinnnssss..." << std::endl;
 }

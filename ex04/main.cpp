@@ -1,11 +1,9 @@
 #include <iostream>
 #include "FileReplacer.hpp"
 
-using namespace std;
-
 int main(int argc, char** argv) {
     if (argc != 4){
-        std::cout << "Error: This program does not take any arguments." << std::endl;
+        std::cout << "Error: This program requires exactly 3 arguments." << std::endl;
         return 1;
     }
     FileReplacer fileReplacer;

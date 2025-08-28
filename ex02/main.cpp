@@ -1,17 +1,16 @@
 #include <iostream>
-
-using namespace std;
+#include <string>
 
 int main() {
-    string Brain = "HI THIS IS BRAIN";
-    string* stringPTR = &Brain;
-    string& stringREF = Brain;
+    std::string Brain = "HI THIS IS BRAIN";
+    std::string* stringPTR = &Brain;
+    std::string& stringREF = Brain;
 
-    cout << "Address of Brain: " << &Brain << "\n" << endl;
-    cout << "Address held by stringPTR: " << stringPTR << "\n" << endl;
-    cout << "Address held by stringREF: " << &stringREF << "\n" << endl;
+    std::cout << "Address of Brain: " << &Brain << "\n" << std::endl;
+    std::cout << "Address held by stringPTR: " << stringPTR << "\n" << std::endl;
+    std::cout << "Address held by stringREF: " << &stringREF << "\n" << std::endl;
 
-    cout << "Value of Brain: " << Brain << "\n" << endl;
-    cout << "Value pointed to by stringPTR: " << *stringPTR << "\n" << endl;
-    cout << "Value pointed to by stringREF: " << stringREF << "\n" << endl;
+    std::cout << "Value of Brain: " << Brain << "\n" << std::endl;
+    std::cout << "Value pointed to by stringPTR: " << *stringPTR << "\n" << std::endl;
+    std::cout << "Value pointed to by stringREF: " << stringREF << "\n" << std::endl;
 }

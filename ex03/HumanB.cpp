@@ -5,8 +5,6 @@
 #include "HumanB.hpp"
 #include <iostream>
 
-using namespace std;
-
 HumanB::HumanB() : name("Unnamed"), weapon(nullptr) {}
 HumanB::HumanB(const std::string& name) : name(name), weapon(nullptr) {}
 HumanB::~HumanB() {}
