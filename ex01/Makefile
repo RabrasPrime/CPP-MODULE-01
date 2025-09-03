@@ -30,7 +30,7 @@ DEPS_BONUS        =   $(patsubst %.cpp, $(BUILD_DIR)%.d, $(SRC_BONUS))
 
 SRC =   main.cpp \
 		Zombie.cpp \
-		ZombieHorde.cpp \
+		Zombie_Horde.cpp \
 
 #=-=-=-=-=-=-INCLUDES-=-=-=-=-=#
 
@@ -48,7 +48,7 @@ INCLUDES    =   $(INC_DIR) \
 
 #=-=-=-=-=-=-COMPIL-=-=-=-=-=#
 
-CC          =   clang++
+CC          =   c++
 
 FLAGS       +=  -Wall -Wextra -Werror -std=c++98
 PPFLAGS     +=  $(addprefix -I, $(INCLUDES)) -MMD -MP

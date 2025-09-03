@@ -5,8 +5,8 @@
 #include "HumanB.hpp"
 #include <iostream>
 
-HumanB::HumanB() : name("Unnamed"), weapon(nullptr) {}
-HumanB::HumanB(const std::string& name) : name(name), weapon(nullptr) {}
+HumanB::HumanB() : name("Unnamed"), weapon(NULL) {}
+HumanB::HumanB(const std::string& name) : name(name), weapon(NULL) {}
 HumanB::~HumanB() {}
 HumanB& HumanB::operator=(const HumanB& other) {
     if (this != &other) {

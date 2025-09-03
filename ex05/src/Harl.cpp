@@ -13,7 +13,7 @@ Harl& Harl::operator=(const Harl& other) {
     return *this;
 }
 
-void Harl::complain(std::string level) {
+void Harl::complain(const std::string& level) {
     void (Harl::*functions[])(void) = {
         &Harl::debug,
         &Harl::info,

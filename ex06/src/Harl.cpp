@@ -1,6 +1,7 @@
 #include "Harl.hpp"
 #include <iostream>
 #include <algorithm>
+#include <string>
 
 Harl::Harl() {}
 Harl::~Harl() {}
@@ -14,7 +15,7 @@ Harl& Harl::operator=(const Harl& other) {
     return *this;
 }
 
-void Harl::complain(std::string level) {
+void Harl::complain(const std::string& level) {
     void (Harl::*functions[])(void) = {
         &Harl::debug,
         &Harl::info,
@@ -28,22 +29,21 @@ void Harl::complain(std::string level) {
         "ERROR"
     };
 
-    size_t idx = std::find(std::begin(levels), std::end(levels), level) - std::begin(levels);
-    switch (idx) {
-    case 0:
-        (this->*functions[0])();
-        [[fallthrough]];
-    case 1:
-        (this->*functions[1])();
-        [[fallthrough]];
-    case 2:
-        (this->*functions[2])();
-        [[fallthrough]];
-    case 3:
-        (this->*functions[3])();
-        break;
-    default:
-        std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+   switch (std::find(levels, levels + 4, level) - levels) {
+        case 0:
+            (this->*functions[0])();
+            break;
+        case 1:
+            (this->*functions[1])();
+            break;
+        case 2:
+            (this->*functions[2])();
+            break;
+        case 3:
+            (this->*functions[3])();
+            break;
+        default:
+            std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
     }
 }
 

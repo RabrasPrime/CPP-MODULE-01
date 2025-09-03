@@ -1,5 +1,5 @@
-
 #include "FileReplacer.hpp"
+#include <fstream>
 #include <iostream>
 
 FileReplacer::FileReplacer() {}
@@ -11,15 +11,16 @@ void FileReplacer::replaceInFile(const std::string& filename, const std::string&
         return;
     }
 
-    std::ifstream inputFile(filename);
+    std::ifstream inputFile(filename.c_str());
     if (!inputFile.is_open()) {
         std::cerr << "Error: Could not open file " << filename << std::endl;
         return;
     }
 
-    std::ofstream outputFile(filename + ".replace");
+    std::string outputFilename = filename + ".replace";
+    std::ofstream outputFile(outputFilename.c_str());
     if (!outputFile.is_open()) {
-        std::cerr << "Error: Could not create output file " << filename << ".replace" << std::endl;
+        std::cerr << "Error: Could not create output file " << outputFilename << std::endl;
         inputFile.close();
         return;
     }
@@ -49,4 +50,3 @@ FileReplacer& FileReplacer::operator=(const FileReplacer& other) {
     (void)other;
     return *this;
 }
-
