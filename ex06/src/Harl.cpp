@@ -32,13 +32,10 @@ void Harl::complain(const std::string& level) {
    switch (std::find(levels, levels + 4, level) - levels) {
         case 0:
             (this->*functions[0])();
-            break;
         case 1:
             (this->*functions[1])();
-            break;
         case 2:
             (this->*functions[2])();
-            break;
         case 3:
             (this->*functions[3])();
             break;
