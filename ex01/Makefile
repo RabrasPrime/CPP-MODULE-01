@@ -30,7 +30,7 @@ DEPS_BONUS        =   $(patsubst %.cpp, $(BUILD_DIR)%.d, $(SRC_BONUS))
 
 SRC =   main.cpp \
 		Zombie.cpp \
-		Zombie_Horde.cpp \
+		zombieHorde.cpp \
 
 #=-=-=-=-=-=-INCLUDES-=-=-=-=-=#
 

@@ -8,7 +8,7 @@ Zombie* zombieHorde(int N, std::string name);
 
 int main() {
     int N = 5;
-    std::string baseName = "Zombie";
+    std::string baseName = "Garry";
 
     Zombie* horde = zombieHorde(N, baseName);
     if (!horde) {
